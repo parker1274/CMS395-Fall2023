@@ -5,15 +5,15 @@
 
 ## Team Member
 - **Christian Cassell**
-Development Director, 
+Development Director,  
 and Assistant visual effect developer
   
 - **Nchimunya Mwiinga**
-Visual Effect / User Experience Director,
+Visual Effect / User Experience Director,  
 and Assistant programming developer 
   
-- **Sanghun Park**
-Program Director, 
+- **Sanghun Park**  
+Program Director,  
 and Assistant developer
 
 ## Video Game Proposal / Launch

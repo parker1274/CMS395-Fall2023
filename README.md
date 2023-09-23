@@ -4,15 +4,15 @@
 - Team N.S.C
 
 ## Team Member
-- Christian Cassell
+- **Christian Cassell**
 Development Director, 
 and Assistant visual effect developer
   
-- Nchimunya Mwiinga
+- **Nchimunya Mwiinga**
 Visual Effect / User Experience Director,
 and Assistant programming developer 
   
-- Sanghun Park
+- **Sanghun Park**
 Program Director, 
 and Assistant developer
 

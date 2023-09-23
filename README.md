@@ -4,13 +4,13 @@
 - Team N.S.C
 
 ## Team Member
-- Sanghun Park
-- Nchimunya Mwiinga
 - Christian Cassell
+- Nchimunya Mwiinga
+- Sanghun Park
 
 ## Video Game Proposal / Launch
 [ Working Title: TARSURVIVAL ]
-- Asset: Open world, survival game
+- Asset: Open world, Survival and Escape game
 - Theme: Rollins College
 
 
@@ -20,6 +20,7 @@ work on semester-long projects to develop and present a complete, full-featured 
 will include game rules and mechanics, video game software structure, development of art and
 asset, animation, interaction, playtesting, and related coding knowledge. Prereq: CMS 250 (or
 CMS 270).
+
 Students will at first work on individual game projects. Later they will form a group and work on
 semester wide group game development project. Based on the total student distribution, equal
 membered group will be formed. All the groups will open their own public shared Git repository

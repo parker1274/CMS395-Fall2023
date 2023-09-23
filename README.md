@@ -5,8 +5,16 @@
 
 ## Team Member
 - Christian Cassell
+Development Director, 
+and Assistant visual effect developer
+  
 - Nchimunya Mwiinga
+Visual Effect / User Experience Director,
+and Assistant programming developer 
+  
 - Sanghun Park
+Program Director, 
+and Assistant developer
 
 ## Video Game Proposal / Launch
 [ Working Title: TARSURVIVAL ]

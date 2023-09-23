@@ -13,7 +13,7 @@
 - Asset: Open world, Survival and Escape game
 - Theme: Rollins College
 
-Video Game Development Plan
+[ Video Game Development Plan ]
 
 https://docs.google.com/document/d/1eC6yuqEaRLhO3HA7yqrfUUCuUjEDlN7NQJ5RiJ3hcHQ/edit?usp=sharing
 

@@ -24,7 +24,7 @@ and Assistant developer
 [ Video Game Development Plan ]  
 https://docs.google.com/document/d/1eC6yuqEaRLhO3HA7yqrfUUCuUjEDlN7NQJ5RiJ3hcHQ/edit?usp=sharing
 
-[Powerpoint slide]  
+[ Powerpoint slide ]  
 https://www.canva.com/design/DAFu52tZiaE/_hVYy0AAsizE_Ks9ffJ6XQ/edit?utm_content=DAFu52tZiaE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 

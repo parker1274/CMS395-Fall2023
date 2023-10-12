@@ -24,8 +24,16 @@ and Assistant developer
 [ Video Game Development Plan ]  
 https://docs.google.com/document/d/1eC6yuqEaRLhO3HA7yqrfUUCuUjEDlN7NQJ5RiJ3hcHQ/edit?usp=sharing
 
-[ Powerpoint slide ]  
+[ Pitch Powerpoint slide ]  
 https://www.canva.com/design/DAFu52tZiaE/_hVYy0AAsizE_Ks9ffJ6XQ/edit?utm_content=DAFu52tZiaE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## Video Game Design Project #1 Update
+[ TARSURVIVAL Update #1 ]
+- Worked Asset: Tilemap
+- Tilemap?: Unity's Tilemap system makes it easy to create and iterate level design cycles and allows artists and designers to rapidly prototype when building 2D game worlds.  
+
+[ Progress #1 Powerpoint slide ]  
+https://www.canva.com/design/DAFw_d1BYvs/x-Zj6C4LtOia0Boga8na8g/edit?utm_content=DAFw_d1BYvs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 
 ## Official Description

@@ -41,6 +41,7 @@ https://www.canva.com/design/DAFw_d1BYvs/x-Zj6C4LtOia0Boga8na8g/edit?utm_content
 - Tilemap?: Unity's Tilemap system makes it easy to create and iterate level design cycles and allows artists and designers to rapidly prototype when building 2D game worlds.  
 
 [ Progress #2 Powerpoint slide ]  
+https://www.canva.com/design/DAFxu1YR8LU/cXzwe9nDXLNuHcjYTZfnjg/edit
 
 
 ## Official Description

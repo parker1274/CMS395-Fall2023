@@ -38,10 +38,10 @@ https://www.canva.com/design/DAFw_d1BYvs/x-Zj6C4LtOia0Boga8na8g/edit?utm_content
 ## Video Game Design Project Update #2 
 [ TARSURVIVAL Update #1 ]
 - Worked Asset: Tilemap, Character
-- Tilemap?: Unity's Tilemap system makes it easy to create and iterate level design cycles and allows artists and designers to rapidly prototype when building 2D game worlds.  
+- Character?: A game character is a person, character, or any other entity acting in a game.
 
 [ Progress #2 Powerpoint slide ]  
-https://www.canva.com/design/DAFxu1YR8LU/cXzwe9nDXLNuHcjYTZfnjg/edit
+[https://www.canva.com/design/DAFxu1YR8LU/cXzwe9nDXLNuHcjYTZfnjg/edit](https://www.canva.com/design/DAFxu1YR8LU/cXzwe9nDXLNuHcjYTZfnjg/edit)
 
 
 ## Official Description

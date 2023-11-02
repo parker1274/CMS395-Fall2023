@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class movement : MonoBehaviour
 {
@@ -9,12 +10,21 @@ public class movement : MonoBehaviour
         Vector2 initial;
         public float displacement;
         public Animator animator;
+        public Vector2 direction;
+        private bool playerNearChest;
+        public GameObject chest;
+        public GameObject emerald;
+        public Text words;
        // public float jump;
     
     void Start()
     {
         avatar = GetComponent<Rigidbody2D>();
         initial = avatar.transform.localPosition;
+        direction = Vector2.one.normalized; //(1,1)
+        playerNearChest = false;
+        emerald.SetActive(false);
+        words.text = " ";
     }
 
     // Update is called once per frame
@@ -72,6 +82,29 @@ public class movement : MonoBehaviour
 
         }
 
+        if(playerNearChest && Input.GetKey(KeyCode.P )){
+            words.text = "You've earned\n an \nemerald !!!";
+            emerald.SetActive(true);
+        }
+
         avatar.MovePosition(initial);
+    }
+
+    void OnTriggerEnter2D(Collider2D collison){
+
+        if (collison.gameObject.CompareTag("chest")){
+            playerNearChest = true;
+        }
+    
+    }
+
+    void OnTriggerExit2D(Collider2D collison){
+
+        if (collison.gameObject.CompareTag("chest")){
+            playerNearChest = false;
+            words.text = " ";
+            emerald.SetActive(false);
+        }
+    
     }
 }

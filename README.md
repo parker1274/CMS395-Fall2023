@@ -4,10 +4,6 @@
 - Team N.S.C
 
 ## Team Member
-- **Christian Cassell**:  
-Development Director,  
-and Assistant visual effect developer
-  
 - **Nchimunya Mwiinga**:  
 Visual Effect / User Experience Director,  
 and Assistant programming developer 
@@ -15,6 +11,10 @@ and Assistant programming developer
 - **Sanghun Park**:    
 Program Director,  
 and Assistant developer
+
+- **Christian Cassell**:  
+Development Director,  
+and Assistant visual effect developer  
 
 ## Video Game Proposal / Launch
 [ Working Title: TARSURVIVAL ]

@@ -36,9 +36,10 @@ https://www.canva.com/design/DAFu52tZiaE/_hVYy0AAsizE_Ks9ffJ6XQ/edit?utm_content
 https://www.canva.com/design/DAFw_d1BYvs/x-Zj6C4LtOia0Boga8na8g/edit?utm_content=DAFw_d1BYvs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ## Video Game Design Project Update #2 
-[ TARSURVIVAL Update #1 ]
+[ TARSURVIVAL Update #2 ]
 - Worked Asset: Tilemap, Character
 - Character?: A game character is a person, character, or any other entity acting in a game.
+- Description: Character Movements and Interactions were mainly explored in this update with continuing development on TileMap.
 
 [ Progress #2 Powerpoint slide ]  
 [https://www.canva.com/design/DAFxu1YR8LU/cXzwe9nDXLNuHcjYTZfnjg/edit](https://www.canva.com/design/DAFxu1YR8LU/cXzwe9nDXLNuHcjYTZfnjg/edit)

@@ -8,6 +8,7 @@ public class MapBuilder : MonoBehaviour
     public GameObject ocean;
     Vector3 start = new Vector3(0, 0, 0);
     private int[,] myArray = new int[25, 25];
+    public GameObject islandTwo;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,14 @@ public class MapBuilder : MonoBehaviour
                 }
                 else if (myArray[i, x] == 0 && randomInt >= 95)
                 {
-                    Instantiate(islandOne, start, Quaternion.identity);
+                    if (randomInt <= 97)
+                    {
+                        Instantiate(islandOne, start, Quaternion.identity);
+                    } else
+                    {
+                        Instantiate(islandTwo, start, Quaternion.identity);
+                    }
+                    
 
                     // Boundary checks to ensure you're not accessing outside the array bounds
                     if (i + 1 < 25)

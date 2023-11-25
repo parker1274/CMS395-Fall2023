@@ -153,8 +153,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   islandOne: {fileID: 5297770093582241413, guid: 1f1416569e6f2484181b9367f10da039, type: 3}
+  islandTwo: {fileID: 775410695438096433, guid: 6956c204dfde945f595ea9afc6c3a9c3, type: 3}
+  islandThree: {fileID: 66918401701154247, guid: 2fe38401fcec24fb0ba3283440f81a32, type: 3}
+  islandFour: {fileID: 5388120566554235011, guid: fc7f1d09022b84b678b299fc3b0f6b83, type: 3}
+  islandFive: {fileID: 6317995926939000146, guid: ba1f6b495e0f142ab86d5a57b8f0a423, type: 3}
+  islandSix: {fileID: 1261910848955104499, guid: c02679246e5ae4eb2ba080ba86b68f4e, type: 3}
+  islandSeven: {fileID: 5353011282044062302, guid: 021875fa1f6f24f54843bd72b52029a7, type: 3}
+  islandEight: {fileID: 8785700230051385708, guid: 75a900de99f714edcaec0e97629a544b, type: 3}
+  islandNine: {fileID: 3520487764545227994, guid: 9966daa9a7052460b8f5e3c6ff2d979c, type: 3}
+  islandTen: {fileID: 1830601663519438425, guid: bead2659b19c54c708b59f412cc328f8, type: 3}
+  islandEleven: {fileID: 5048774423563702342, guid: ca728f5d8b0f448f182ddfcf6e70efec, type: 3}
+  storyOne: {fileID: 8187275886590234349, guid: 42dd4fb66ac084e2a80d7bfc78e09257, type: 3}
+  storyTwo: {fileID: 8768604165139604828, guid: 1a2f5d3d428ec47459c74ef4419e0fca, type: 3}
+  storyThree: {fileID: 6063639247128976031, guid: a55e4ac7029de4fabb2dcb922235a2fc, type: 3}
   ocean: {fileID: 1898174162484361214, guid: 21f2e175c51e34e22b5c9e9fa0bb85a9, type: 3}
-  islandTwo: {fileID: 1830601663519438425, guid: bead2659b19c54c708b59f412cc328f8, type: 3}
 --- !u!4 &753946316
 Transform:
   m_ObjectHideFlags: 0
@@ -164,52 +176,6 @@ Transform:
   m_GameObject: {fileID: 753946314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5823131, y: 1.2191579, z: -0.54620767}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &968605891
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 968605893}
-  - component: {fileID: 968605892}
-  m_Layer: 0
-  m_Name: levelGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &968605892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968605891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae11a205df9f47e1973f8ec0587f1b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ocean: {fileID: 1898174162484361214, guid: 21f2e175c51e34e22b5c9e9fa0bb85a9, type: 3}
-  island1: {fileID: 5297770093582241413, guid: 1f1416569e6f2484181b9367f10da039, type: 3}
---- !u!4 &968605893
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968605891}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.448271, y: 1.4217757, z: -0.084664315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -11,11 +11,21 @@ public class movement : MonoBehaviour
         public float displacement;
         public Animator animator;
         public Vector2 direction;
+        private bool isLeft;
+        private bool isDown;
+        private bool isUp;
+        private bool isRight;
         private bool playerNearChest;
+
+        //private bool hasSliced;
         public GameObject chest;
         public GameObject emerald;
         public Text words;
-       // public float jump;
+
+        // Sound effects
+        [SerializeField]public AudioSource attack;
+        [SerializeField]public AudioSource collect;
+        [SerializeField]public AudioSource coin;
     
     void Start()
     {
@@ -25,6 +35,13 @@ public class movement : MonoBehaviour
         playerNearChest = false;
         emerald.SetActive(false);
         words.text = " ";
+        
+        // Fight controls
+        isDown = false;
+        isUp = false;
+        isLeft = false;
+        isRight = false;
+
     }
 
     // Update is called once per frame
@@ -33,12 +50,11 @@ public class movement : MonoBehaviour
         if ((Input.GetKey(KeyCode.D))){
             if (initial.x <= 14){
                 initial.x = initial.x + displacement;
-                animator.SetBool("isRight", true);
-                //animator.SetInteger("speed", 2);
                 animator.SetBool("walkright", true);
-                // animator.SetBool("walkleft", false);
-                // animator.SetBool("walkforward", false);
-                // animator.SetBool("walkbackward", false);
+                animator.SetBool("walkleft", false);
+                animator.SetBool("walkforward", false);
+                animator.SetBool("walkbackward", false);
+                isRight = true;
             }
             
         }
@@ -49,42 +65,67 @@ public class movement : MonoBehaviour
                 animator.SetBool("walkbackward", false);
                 animator.SetBool("walkright", false);
                 animator.SetBool("walkleft", true);
+                isLeft = true;
+
             }
         }
         else if((Input.GetKey(KeyCode.W))){
             if (initial.y <= 14){
                 initial.y = initial.y + displacement;
-                //animator.SetInteger("speed",3);
                 animator.SetBool("walkleft", false);
                 animator.SetBool("walkbackward", false);
                 animator.SetBool("walkright", false);
                 animator.SetBool("walkforward", true);
+                isUp = true;
             }
         }
         else if((Input.GetKey(KeyCode.S))){
             if (initial.y > -14){
                 initial.y = initial.y - displacement;
-                //animator.SetInteger("speed",-1);
                 animator.SetBool("walkleft", false);
                 animator.SetBool("walkforward", false);
                 animator.SetBool("walkright", false);
                 animator.SetBool("walkbackward", true);
+                isDown = true;
             }
         }
 
         else
         {
-            animator.SetInteger("speed", 0);
             animator.SetBool("walkleft", false);
             animator.SetBool("walkforward", false);
             animator.SetBool("walkbackward", false);
             animator.SetBool("walkright", false);
+            isDown = false;
+            isUp = false;
+            isLeft = false;
+            isRight = false;
+        
 
         }
 
         if(playerNearChest && Input.GetKey(KeyCode.P )){
             words.text = "You've earned\n an \nemerald !!!";
             emerald.SetActive(true);
+            collect.Play();
+        }
+
+        if (Input.GetKey(KeyCode.Y) && isRight)
+        {   
+            animator.SetTrigger("rightFight");
+            attack.Play();   
+        }
+        if (Input.GetKeyDown(KeyCode.Y) && isLeft){
+            animator.SetTrigger("leftFight");
+            attack.Play();
+        }
+        if (Input.GetKey(KeyCode.Y) && isUp){
+            animator.SetTrigger("upFight");
+            attack.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.Y) && isDown){
+            animator.SetTrigger("downFight");
+            attack.Play();
         }
 
         avatar.MovePosition(initial);
@@ -94,6 +135,10 @@ public class movement : MonoBehaviour
 
         if (collison.gameObject.CompareTag("chest")){
             playerNearChest = true;
+        }
+
+        if(collison.gameObject.CompareTag("coin")){
+            coin.Play();
         }
     
     }

@@ -27,7 +27,7 @@ public class coinscript : MonoBehaviour
 
         void SetCountText()
         {
-        point.text = "Coins: "+count.ToString();
+            point.text = "Coins: "+count.ToString();
         }
         // Start is called before the first frame update
 }

@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &381935599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,8 +459,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a897e89aa686a438b871077518096460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipScript: {fileID: 1631031985}
   FollowSpeed: 2
-  target: {fileID: 1631031987}
+  target1: {fileID: 1631031984}
+  target2: {fileID: 2065177414}
 --- !u!1 &827971379
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &827971380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,7 +759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1193587061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1222,6 +1224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boat: {fileID: 1631031984}
   moveSpeed: 5
+  moveOk: 1
+  player: {fileID: 2065177414}
 --- !u!212 &1631031986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1355,7 +1359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1735863594
 Rigidbody2D:
   serializedVersion: 4
@@ -1640,7 +1644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2031813442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,9 +1798,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7211ee5093117409fbd087bbe25f5406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displacement: 0.01
+  displacement: 0.02
   animator: {fileID: 2065177416}
   direction: {x: 0, y: 0}
+  player: {fileID: 2065177414}
+  shipScript: {fileID: 1631031985}
   chest: {fileID: 1249255394}
   emerald: {fileID: 1430812197}
   words: {fileID: 1906145713}
@@ -1931,7 +1937,7 @@ Transform:
   m_GameObject: {fileID: 2065177414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.56, y: 2.63, z: 0}
-  m_LocalScale: {x: 4.2880344, y: 4.1611943, z: -9}
+  m_LocalScale: {x: 3, y: 3, z: -9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

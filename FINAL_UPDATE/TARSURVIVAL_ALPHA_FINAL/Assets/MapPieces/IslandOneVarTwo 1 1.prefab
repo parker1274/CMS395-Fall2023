@@ -6267,7 +6267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5297770092706487352}
-  - component: {fileID: 8113295147078767636}
+  - component: {fileID: 7626572196341978171}
   m_Layer: 0
   m_Name: dock
   m_TagString: dock
@@ -6290,10 +6290,11 @@ Transform:
   - {fileID: 8981496957963970784}
   - {fileID: 8981496959114345994}
   - {fileID: 8981496958422835144}
+  - {fileID: 1326353074617218613}
   m_Father: {fileID: 5297770093582241412}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8113295147078767636
+--- !u!61 &7626572196341978171
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19096,10 +19097,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5297770093582241412}
-  - component: {fileID: 558782977777616904}
   m_Layer: 0
   m_Name: IslandOneVarTwo 1 1
-  m_TagString: island
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19122,36 +19122,9 @@ Transform:
   - {fileID: 5297770093591581428}
   - {fileID: 5297770094259754734}
   - {fileID: 5399205468469605190}
-  - {fileID: 1326353074617218613}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &558782977777616904
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5297770093582241413}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 10, y: 10}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 18, y: 18}
-  m_EdgeRadius: 0
 --- !u!1 &5297770093591581429
 GameObject:
   m_ObjectHideFlags: 0
@@ -25409,9 +25382,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5297770094085258993}
+  - component: {fileID: 1845965263163048175}
   m_Layer: 0
   m_Name: Island
-  m_TagString: Untagged
+  m_TagString: island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25746,6 +25720,32 @@ Transform:
   m_Father: {fileID: 5297770093582241412}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1845965263163048175
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297770094085258998}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 10, y: 10}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 18, y: 18}
+  m_EdgeRadius: 0
 --- !u!1 &5297770094091181488
 GameObject:
   m_ObjectHideFlags: 0
@@ -29508,13 +29508,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8273553237709599291}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.5, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5297770093582241412}
-  m_RootOrder: 6
+  m_Father: {fileID: 5297770092706487352}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9137111346296888008
 GameObject:

@@ -34,9 +34,13 @@ public class Ship : MonoBehaviour
         }
         if (transform.position.x < 9.5)
         {
-            transform.position = new Vector2(5, transform.position.y);
+            transform.position = new Vector2(9.5f, transform.position.y);
         }
-        if (transform.position.y < 9.5)
+        if (transform.position.y > 495)
+        {
+            transform.position = new Vector2(transform.position.x, 495);
+        }
+        if (transform.position.x > 495)
         {
             transform.position = new Vector2(495, transform.position.y);
         }

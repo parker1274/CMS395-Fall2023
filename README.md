@@ -37,13 +37,31 @@ https://www.canva.com/design/DAFw_d1BYvs/x-Zj6C4LtOia0Boga8na8g/edit?utm_content
 
 ## Video Game Design Project Update #2 
 [ TARSURVIVAL Update #2 ]
-- Worked Asset: Tilemap, Character
+- Worked Assets: Tilemap, Character
 - Character?: A game character is a person, character, or any other entity acting in a game.
 - Description: Character Movements and Interactions were mainly explored in this update with continuing development on TileMap.
 
 [ Progress #2 Powerpoint slide ]  
-[https://www.canva.com/design/DAFxu1YR8LU/cXzwe9nDXLNuHcjYTZfnjg/edit](https://www.canva.com/design/DAFxu1YR8LU/cXzwe9nDXLNuHcjYTZfnjg/edit)
+https://www.canva.com/design/DAFxu1YR8LU/cXzwe9nDXLNuHcjYTZfnjg/edit?utm_content=DAFxu1YR8LU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
+## Video Game Design Project Update #3 
+[ TARSURVIVAL Update #3 ]
+- Worked Assets: Tilemap, Character Animation
+- 2D Animation / Sprite Animation?: Sprite Animations are animation clips that are created for 2D assets. There are various ways to create Sprite Animations. One way is to create them from a Sprite Sheet, a collection of Sprites arranged in a grid. The Sprites are then compiled into an Animation Clip that will play each Sprite in order to create the animation, much like a flipbook. Sprite Animations can also be created by using keyframe animation in Unity, via the Animation window.  
+- Description: Character Movements and Animations were mainly explored in this update with continuing development on TileMap.
+
+[ Progress #3 Powerpoint slide ]  
+https://www.canva.com/design/DAFy2q0eh0I/X7w4HfHrqIJ5w5kWAqTjHQ/edit?utm_content=DAFy2q0eh0I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+## Video Game Design Project Update #4 (Demo)
+[ TARSURVIVAL Update #4 ]
+- Worked Assets: Tilemap, Character, Inventory, Quest
+
+[ Progress #4 Final Report ] 
+https://docs.google.com/document/d/1RGrLTkavZMxP5oQIuM1lez_9NcEqqQiFd8H_I80FH2g/edit
+
+[ Progress #4 Powerpoint slide ]  
+https://www.canva.com/design/DAF1l_ZVPms/XKafMGBAZqtSnNaSYjwVwQ/edit
 
 ## Official Description
 This course covers video game design, implementation, and evaluation essentials. Students will

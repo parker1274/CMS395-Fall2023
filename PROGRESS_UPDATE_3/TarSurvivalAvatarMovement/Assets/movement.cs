@@ -16,11 +16,16 @@ public class movement : MonoBehaviour
         private bool isUp;
         private bool isRight;
         private bool playerNearChest;
+        private bool death_con;
 
         //private bool hasSliced;
         public GameObject chest;
         public GameObject emerald;
+        public GameObject enemy1;
+        public GameObject enemy2;
+        public GameObject enemy3;
         public Text words;
+        public LayerMask Enemy_layer;
 
         // Sound effects
         [SerializeField]public AudioSource attack;
@@ -35,6 +40,7 @@ public class movement : MonoBehaviour
         playerNearChest = false;
         emerald.SetActive(false);
         words.text = " ";
+        death_con = false;
         
         // Fight controls
         isDown = false;
@@ -44,11 +50,23 @@ public class movement : MonoBehaviour
 
     }
 
+    // private bool isWalkable(Vector3 targetPos)
+    // {
+    //     if (Physics2D.OverlapCircleAll(targetPos, 0.2f, enemyLayer) != null){
+    //         return false;
+    //     }
+    //     return true;
+    // }
+
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
         if ((Input.GetKey(KeyCode.D))){
             if (initial.x <= 14){
+                isDown = false;
+                isUp = false;
+                isLeft = false;
+                isRight = false;
                 initial.x = initial.x + displacement;
                 animator.SetBool("walkright", true);
                 animator.SetBool("walkleft", false);
@@ -60,6 +78,10 @@ public class movement : MonoBehaviour
         }
         else if((Input.GetKey(KeyCode.A))){
             if (initial.x > -14){
+                isDown = false;
+                isUp = false;
+                isLeft = false;
+                isRight = false;
                 initial.x = initial.x - displacement;
                 animator.SetBool("walkforward", false);
                 animator.SetBool("walkbackward", false);
@@ -71,6 +93,10 @@ public class movement : MonoBehaviour
         }
         else if((Input.GetKey(KeyCode.W))){
             if (initial.y <= 14){
+                isDown = false;
+                isUp = false;
+                isLeft = false;
+                isRight = false;
                 initial.y = initial.y + displacement;
                 animator.SetBool("walkleft", false);
                 animator.SetBool("walkbackward", false);
@@ -81,6 +107,10 @@ public class movement : MonoBehaviour
         }
         else if((Input.GetKey(KeyCode.S))){
             if (initial.y > -14){
+                isDown = false;
+                isUp = false;
+                isLeft = false;
+                isRight = false;
                 initial.y = initial.y - displacement;
                 animator.SetBool("walkleft", false);
                 animator.SetBool("walkforward", false);
@@ -96,10 +126,10 @@ public class movement : MonoBehaviour
             animator.SetBool("walkforward", false);
             animator.SetBool("walkbackward", false);
             animator.SetBool("walkright", false);
-            isDown = false;
-            isUp = false;
-            isLeft = false;
-            isRight = false;
+            // isDown = false;
+            // isUp = false;
+            // isLeft = false;
+            // isRight = false;
         
 
         }
@@ -113,18 +143,23 @@ public class movement : MonoBehaviour
         if (Input.GetKey(KeyCode.Y) && isRight)
         {   
             animator.SetTrigger("rightFight");
+            death_con = true;
+            //Physics2D.OverlapCircleAll();
             attack.Play();   
         }
         if (Input.GetKeyDown(KeyCode.Y) && isLeft){
             animator.SetTrigger("leftFight");
+            death_con = true;
             attack.Play();
         }
         if (Input.GetKey(KeyCode.Y) && isUp){
             animator.SetTrigger("upFight");
+            death_con = true;
             attack.Play();
         }
         if (Input.GetKeyDown(KeyCode.Y) && isDown){
             animator.SetTrigger("downFight");
+            death_con = true;
             attack.Play();
         }
 
@@ -140,7 +175,33 @@ public class movement : MonoBehaviour
         if(collison.gameObject.CompareTag("coin")){
             coin.Play();
         }
+
+        if(collison.gameObject.CompareTag("enemy") && death_con){
+            
+            enemy1.GetComponent<AIChase>().TakeDamage(25);
+  
+        }
+
+        if(collison.gameObject.CompareTag("enemy1") && death_con){
+            
+            enemy2.GetComponent<AIChase>().TakeDamage(25);
+  
+        }
+
+
+        if(collison.gameObject.CompareTag("enemy2") && death_con){
+            
+            enemy3.GetComponent<AIChase>().TakeDamage(25);
+  
+        }
+
+                  
+            
     
+    }
+
+    public bool deathCon(){
+        return death_con;
     }
 
     void OnTriggerExit2D(Collider2D collison){
@@ -150,6 +211,11 @@ public class movement : MonoBehaviour
             words.text = " ";
             emerald.SetActive(false);
         }
+
+         if(collison.gameObject.CompareTag("enemy"))
+         {
+            death_con = false;
+         }
     
     }
 }

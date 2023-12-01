@@ -198,57 +198,57 @@ public class MapBuilder : MonoBehaviour
     {
 
         float randomIsland = (int)Random.Range(1f, 11f);
-        if (randomIsland == 1 && One <= 2)
+        if (randomIsland == 1 && One < 2)
         {
             Instantiate(islandOne, start, Quaternion.identity);
             One += 1;
         }
-        else if (randomIsland == 2 && Two <= 2)
+        else if (randomIsland == 2 && Two < 2)
         {
             Instantiate(islandTwo, start, Quaternion.identity);
             Two += 1;
         }
-        else if (randomIsland == 3 && Three <= 2)
+        else if (randomIsland == 3 && Three < 2)
         {
             Instantiate(islandThree, start, Quaternion.identity);
             Three += 1;
         }
-        else if (randomIsland == 4 && Four <= 2)
+        else if (randomIsland == 4 && Four < 2)
         {
             Instantiate(islandFour, start, Quaternion.identity);
             Four += 1;
         }
-        else if (randomIsland == 5 && Five <= 2)
+        else if (randomIsland == 5 && Five < 2)
         {
             Instantiate(islandFive, start, Quaternion.identity);
             Five += 1;
         }
-        else if (randomIsland == 6 && Six <= 2)
+        else if (randomIsland == 6 && Six < 2)
         {
             Instantiate(islandSix, start, Quaternion.identity);
             Six += 1;
         }
-        else if (randomIsland == 7 && Seven <= 2)
+        else if (randomIsland == 7 && Seven < 2)
         {
             Instantiate(islandSeven, start, Quaternion.identity);
             Seven += 1;
         }
-        else if (randomIsland == 8 && Eight <= 2)
+        else if (randomIsland == 8 && Eight < 2)
         {
             Instantiate(islandEight, start, Quaternion.identity);
             Eight += 1;
         }
-        else if (randomIsland == 9 && Nine <= 2)
+        else if (randomIsland == 9 && Nine < 2)
         {
             Instantiate(islandNine, start, Quaternion.identity);
             Nine += 1;
         }
-        else if (randomIsland == 10 && Ten <= 2)
+        else if (randomIsland == 10 && Ten < 2)
         {
             Instantiate(islandTen, start, Quaternion.identity);
             Ten += 1;
         }
-        else if (One > 2 && Two > 2 && Three > 2 && Four > 2 && Five > 2 && Six > 2 && Seven > 2 && Eight > 2 && Nine > 2 && Ten > 2)
+        else if (One >= 1 && Two >= 1 && Three >= 1 && Four >= 1 && Five >= 1 && Six >= 1 && Seven >= 1 && Eight >=1  && Nine >= 1 && Ten >= 1)
         {
             Instantiate(ocean, start, Quaternion.identity);
         } else

@@ -9,6 +9,7 @@ TagManager:
   - chest
   - island
   - dock
+  - dock1
   layers:
   - Default
   - TransparentFX

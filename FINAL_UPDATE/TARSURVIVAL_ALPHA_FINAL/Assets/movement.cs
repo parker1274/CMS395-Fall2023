@@ -18,6 +18,8 @@ public class movement : MonoBehaviour
     private bool playerNearChest;
     public GameObject player;
     public Ship shipScript;
+    public Docking docking;
+    public Vector2 checking;
 
 
     //private bool hasSliced;
@@ -45,15 +47,24 @@ public class movement : MonoBehaviour
         isLeft = false;
         isRight = false;
 
-        GameObject shipObject = GameObject.Find("YourShipObjectName");
+        GameObject shipObject = GameObject.Find("ship1");
+        
         shipScript = shipObject.GetComponent<Ship>();
+        docking = shipObject.GetComponent<Docking>();
 
     }
 
     void Update()
     {
-        CheckCollisionWithDock(transform.position);
-        
+        if (!Input.GetKeyDown(KeyCode.E)) {
+            avatar.transform.position = (initial);
+        } else
+        {
+
+            initial = docking.cr;
+        }
+        bool collisionResult = CheckCollisionWithDock(player.transform.position);
+        Debug.Log($"Collision result: {collisionResult}");
         // Get input for movement
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -74,9 +85,11 @@ public class movement : MonoBehaviour
 
         // Check for attack input
         CheckAttackInput();
-
+        checking = docking.marker;
+        
         // Move the avatar to the updated position
-        avatar.MovePosition(initial);
+        
+
 
     }
 
@@ -114,7 +127,9 @@ public class movement : MonoBehaviour
             }
         }
     }
-    bool CheckCollisionWithDock(Vector3 position)
+
+    
+    bool CheckCollisionWithDock(Vector2 position)
     {
         
         Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 1.0f); // Adjust the radius as needed
@@ -123,12 +138,15 @@ public class movement : MonoBehaviour
         {
             if (collider.CompareTag("dock"))
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                
+                if (Input.GetKeyDown(KeyCode.E) && collider.CompareTag("dock"))
                 {
                     player.SetActive(false);
                     shipScript.moveOk = true;
-
+                    initial = docking.cr;
+                    avatar.MovePosition(docking.cr);
                 }
+                return true;
             }
         }
 

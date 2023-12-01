@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 414310390}
   - component: {fileID: 414310389}
   - component: {fileID: 414310388}
+  - component: {fileID: 414310392}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -362,6 +363,22 @@ RectTransform:
   m_AnchoredPosition: {x: 9.5, y: 5}
   m_SizeDelta: {x: 1760, y: 933}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &414310392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414310387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a897e89aa686a438b871077518096460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipScript: {fileID: 1631031985}
+  FollowSpeed: 2
+  target1: {fileID: 1631031984}
+  target2: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,6 +1220,7 @@ GameObject:
   - component: {fileID: 1631031985}
   - component: {fileID: 1631031989}
   - component: {fileID: 1631031988}
+  - component: {fileID: 1631031990}
   m_Layer: 0
   m_Name: ship1
   m_TagString: Untagged
@@ -1340,6 +1358,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &1631031990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631031984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410cd025de459492f89e1e4499c8e389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2065177414}
+  shipScript: {fileID: 1631031985}
+  ship1: {fileID: 1631031984}
+  marker: {x: 0, y: 0}
+  cr: {x: 0, y: 0}
 --- !u!1 &1735863592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,6 +1838,8 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   player: {fileID: 2065177414}
   shipScript: {fileID: 1631031985}
+  docking: {fileID: 1631031990}
+  checking: {x: 0, y: 0}
   chest: {fileID: 1249255394}
   emerald: {fileID: 1430812197}
   words: {fileID: 1906145713}
@@ -1936,7 +1973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065177414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.56, y: 2.63, z: 0}
+  m_LocalPosition: {x: 7.56, y: 2.63, z: -5}
   m_LocalScale: {x: 3, y: 3, z: -9}
   m_ConstrainProportionsScale: 0
   m_Children: []

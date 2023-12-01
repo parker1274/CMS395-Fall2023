@@ -9,6 +9,7 @@ public class Ship : MonoBehaviour
     public float moveSpeed = 5.0f;
     public bool moveOk = true;
     public GameObject player;
+    
    
 
 
@@ -25,7 +26,7 @@ public class Ship : MonoBehaviour
 
         // Calculate the new position
         Vector3 newPosition = transform.position + new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime;
-        CheckCollisionWithDock(transform.position);
+     
         // Move the boat only if there is no collision with islands or dock
         if (!CheckCollisionWithIsland(newPosition) && moveOk)
         {
@@ -63,31 +64,13 @@ public class Ship : MonoBehaviour
             {
                 return true; // Collision with island detected
             }
+            
         }
 
         return false; // No collision with islands
     }
 
-    bool CheckCollisionWithDock(Vector3 position)
-    {
 
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 1.0f); // Adjust the radius as needed
-
-        foreach (Collider2D collider in colliders)
-        {
-            if (collider.CompareTag("dock"))
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    player.transform.position = new Vector3(collider.transform.position.x + 5, collider.transform.position.y + 3);
-                    player.SetActive(true);
-                    moveOk = false;
-                }
-            }
-        }
-
-        return false; // No collision with dock or "SpawnPos" not found
-    }
 }
 
 

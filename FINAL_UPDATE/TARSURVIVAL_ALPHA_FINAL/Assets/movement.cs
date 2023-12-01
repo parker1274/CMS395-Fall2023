@@ -7,7 +7,7 @@ public class movement : MonoBehaviour
 {
     // Start is called before the first frame update
     Rigidbody2D avatar;
-    Vector2 initial;
+    public Vector2 initial;
     public float displacement;
     public Animator animator;
     public Vector2 direction;
@@ -56,12 +56,16 @@ public class movement : MonoBehaviour
 
     void Update()
     {
-        if (!Input.GetKeyDown(KeyCode.E)) {
-            avatar.transform.position = (initial);
-        } else
+        
+        if (Input.GetKeyDown(KeyCode.E))
         {
-
             initial = docking.cr;
+            
+        }
+        else
+        {
+            avatar.transform.position = (initial);
+            Debug.Log(initial);
         }
         bool collisionResult = CheckCollisionWithDock(player.transform.position);
         Debug.Log($"Collision result: {collisionResult}");

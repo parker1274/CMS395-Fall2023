@@ -67,6 +67,14 @@ public class movement : MonoBehaviour
             avatar.transform.position = (initial);
             Debug.Log(initial);
         }
+        float distance = Vector3.Distance(player.transform.position, checking);
+
+        // Check if the distance is more than the threshold
+        if (distance > 20)
+        {
+            player.transform.position = checking;
+            avatar.transform.position = checking;
+        }
         bool collisionResult = CheckCollisionWithDock(player.transform.position);
         Debug.Log($"Collision result: {collisionResult}");
         // Get input for movement

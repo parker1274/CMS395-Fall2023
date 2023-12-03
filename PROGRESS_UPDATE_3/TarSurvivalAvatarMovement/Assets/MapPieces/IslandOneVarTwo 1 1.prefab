@@ -5277,7 +5277,7 @@ GameObject:
   - component: {fileID: 6622010768003826912}
   m_Layer: 0
   m_Name: Building9
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5388,7 +5388,7 @@ GameObject:
   - component: {fileID: 8610436660807360142}
   m_Layer: 0
   m_Name: Target (1)
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5835,7 +5835,7 @@ GameObject:
   - component: {fileID: 6506202417472497279}
   m_Layer: 0
   m_Name: Target (2)
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7687,7 +7687,7 @@ GameObject:
   - component: {fileID: 7357321870806362843}
   m_Layer: 0
   m_Name: Sawmill
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13006,7 +13006,7 @@ GameObject:
   - component: {fileID: 8172882526802073457}
   m_Layer: 0
   m_Name: Smithy
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14377,7 +14377,7 @@ GameObject:
   - component: {fileID: 7623040358071234417}
   m_Layer: 0
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19711,7 +19711,7 @@ GameObject:
   - component: {fileID: 3030562435445846266}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20410,7 +20410,7 @@ GameObject:
   - component: {fileID: 1610745431225408320}
   m_Layer: 0
   m_Name: Building6
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21109,7 +21109,7 @@ GameObject:
   - component: {fileID: 973841939068224472}
   m_Layer: 0
   m_Name: Building8
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21892,7 +21892,7 @@ GameObject:
   - component: {fileID: 1195327800805948740}
   m_Layer: 0
   m_Name: Caravan
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24187,7 +24187,7 @@ GameObject:
   - component: {fileID: 1274286997944652638}
   m_Layer: 0
   m_Name: Stall2
-  m_TagString: Untagged
+  m_TagString: collide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

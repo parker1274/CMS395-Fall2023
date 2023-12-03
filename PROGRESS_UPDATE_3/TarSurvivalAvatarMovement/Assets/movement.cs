@@ -7,7 +7,7 @@ public class movement : MonoBehaviour
 {
     // Start is called before the first frame update
     Rigidbody2D avatar;
-    Vector2 initial;
+    public Vector2 initial;
     public float displacement;
     public Animator animator;
     public Vector2 direction;
@@ -16,7 +16,10 @@ public class movement : MonoBehaviour
     private bool isUp;
     private bool isRight;
     private bool playerNearChest;
-    private bool death_con;
+    public bool death_con;
+    public playerMove playerMoving;
+    public GameObject player;
+    public Ship shipScript;
 
     //private bool hasSliced;
     public GameObject chest;
@@ -26,6 +29,12 @@ public class movement : MonoBehaviour
     public GameObject enemy3;
     public Text words;
     public LayerMask Enemy_layer;
+    public Vector2 oldPos;
+    bool moveCheck = true;
+    bool plusX;
+    bool minusX;
+    bool plusY;
+    bool minusY;
 
     // Sound effects
     [SerializeField] public AudioSource attack;
@@ -52,71 +61,81 @@ public class movement : MonoBehaviour
 
     void Update()
     {
+        
         if ((Input.GetKey(KeyCode.D)))
         {
-            if (initial.x <= 14)
-            {
+            // if (initial.x <= 14)
+            //{
                 isDown = false;
                 isUp = false;
                 isLeft = false;
                 isRight = false;
+                
                 initial.x = initial.x + displacement;
+                plusX = true;
                 animator.SetBool("walkright", true);
                 animator.SetBool("walkleft", false);
                 animator.SetBool("walkforward", false);
                 animator.SetBool("walkbackward", false);
                 isRight = true;
-            }
+            //}
 
         }
         else if ((Input.GetKey(KeyCode.A)))
         {
-            if (initial.x > -14)
-            {
+            //if (initial.x > -14)
+            //{
                 isDown = false;
                 isUp = false;
                 isLeft = false;
                 isRight = false;
+                
                 initial.x = initial.x - displacement;
+                minusX = true;
+                
                 animator.SetBool("walkforward", false);
                 animator.SetBool("walkbackward", false);
                 animator.SetBool("walkright", false);
                 animator.SetBool("walkleft", true);
                 isLeft = true;
 
-            }
+            //}
         }
         else if ((Input.GetKey(KeyCode.W)))
         {
-            if (initial.y <= 14)
-            {
+            //if (initial.y <= 14)
+            //{
                 isDown = false;
                 isUp = false;
                 isLeft = false;
                 isRight = false;
+                
                 initial.y = initial.y + displacement;
+                plusY = true;
                 animator.SetBool("walkleft", false);
                 animator.SetBool("walkbackward", false);
                 animator.SetBool("walkright", false);
                 animator.SetBool("walkforward", true);
                 isUp = true;
-            }
+            //}
         }
         else if ((Input.GetKey(KeyCode.S)))
         {
-            if (initial.y > -14)
-            {
+            //if (initial.y > -14)
+            //{
                 isDown = false;
                 isUp = false;
                 isLeft = false;
                 isRight = false;
+                
                 initial.y = initial.y - displacement;
+                minusY = true;
                 animator.SetBool("walkleft", false);
                 animator.SetBool("walkforward", false);
                 animator.SetBool("walkright", false);
                 animator.SetBool("walkbackward", true);
                 isDown = true;
-            }
+            //}
         }
 
         else
@@ -164,8 +183,34 @@ public class movement : MonoBehaviour
             death_con = true;
             attack.Play();
         }
-
-        avatar.MovePosition(initial);
+        oldPos = avatar.position;
+        if (!CheckCollisionWithCollide(initial))
+        {
+            avatar.MovePosition(initial);
+        } else
+        {
+            if (plusY == true)
+            {
+                initial.y = initial.y - displacement * 2;
+                plusY = false;
+            }
+            else if(minusY == true)
+            {
+                initial.y = initial.y + displacement * 2;
+                minusY = false;
+            }
+            else if (plusX == true)
+            {
+                initial.x = initial.x - displacement * 2;
+                plusX = false;
+            } else if (minusX == true)
+            {
+                initial.x = initial.x + displacement * 2;
+                minusX = false;
+            }
+        }
+        
+        
     }
 
     void OnTriggerEnter2D(Collider2D collison)
@@ -180,28 +225,12 @@ public class movement : MonoBehaviour
         {
             coin.Play();
         }
-
-        if (collison.gameObject.CompareTag("enemy") && death_con)
+        if (collison.gameObject.CompareTag("collide"))
         {
-
-            enemy1.GetComponent<AIChase>().TakeDamage(25);
-
-        }
-
-        if (collison.gameObject.CompareTag("enemy1") && death_con)
-        {
-
-            enemy2.GetComponent<AIChase>().TakeDamage(25);
-
+           
         }
 
 
-        if (collison.gameObject.CompareTag("enemy2") && death_con)
-        {
-
-            enemy3.GetComponent<AIChase>().TakeDamage(25);
-
-        }
     }
 
 
@@ -225,5 +254,22 @@ public class movement : MonoBehaviour
             death_con = false;
         }
 
+    }
+    bool CheckCollisionWithCollide(Vector2 position)
+    {
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, .1f); // Adjust the radius as needed
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("collide"))
+            {
+                return true;
+                Debug.Log(true);
+            }
+        }
+
+        return false; // No collision with dock or "SpawnPos" not found
+        Debug.Log(false);
     }
 }

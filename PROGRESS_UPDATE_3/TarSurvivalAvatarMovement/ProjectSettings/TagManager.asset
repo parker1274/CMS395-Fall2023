@@ -10,7 +10,10 @@ TagManager:
   - enemy
   - enemy1
   - enemy2
-  - enemies
+  - island
+  - collide
+  - dock
+  - check
   layers:
   - Default
   - TransparentFX

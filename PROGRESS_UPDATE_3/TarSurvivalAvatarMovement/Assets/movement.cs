@@ -3,35 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class movement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-        Rigidbody2D avatar;
-        Vector2 initial;
-        public float displacement;
-        public Animator animator;
-        public Vector2 direction;
-        private bool isLeft;
-        private bool isDown;
-        private bool isUp;
-        private bool isRight;
-        private bool playerNearChest;
-        private bool death_con;
+    Rigidbody2D avatar;
+    public Vector2 initial;
+    public float displacement;
+    public Animator animator;
+    public Vector2 direction;
+    private bool isLeft;
+    private bool isDown;
+    private bool isUp;
+    private bool isRight;
+    private bool playerNearChest;
+    public GameObject player;
+    public Ship shipScript;
+    public Docking docking;
+    public Vector2 checking;
 
-        //private bool hasSliced;
-        public GameObject chest;
-        public GameObject emerald;
-        public GameObject enemy1;
-        public GameObject enemy2;
-        public GameObject enemy3;
-        public Text words;
-        public LayerMask Enemy_layer;
 
-        // Sound effects
-        [SerializeField]public AudioSource attack;
-        [SerializeField]public AudioSource collect;
-        [SerializeField]public AudioSource coin;
-    
+    //private bool hasSliced;
+    public GameObject chest;
+    public GameObject emerald;
+    public Text words;
+
+    // Sound effects
+    [SerializeField] public AudioSource attack;
+    [SerializeField] public AudioSource collect;
+    [SerializeField] public AudioSource coin;
+
     void Start()
     {
         avatar = GetComponent<Rigidbody2D>();
@@ -40,182 +40,144 @@ public class movement : MonoBehaviour
         playerNearChest = false;
         emerald.SetActive(false);
         words.text = " ";
-        death_con = false;
-        
+
         // Fight controls
         isDown = false;
         isUp = false;
         isLeft = false;
         isRight = false;
 
+        GameObject shipObject = GameObject.Find("ship1");
+
+        shipScript = shipObject.GetComponent<Ship>();
+        docking = shipObject.GetComponent<Docking>();
+
     }
 
-    // private bool isWalkable(Vector3 targetPos)
-    // {
-    //     if (Physics2D.OverlapCircleAll(targetPos, 0.2f, enemyLayer) != null){
-    //         return false;
-    //     }
-    //     return true;
-    // }
-
-    // Update is called once per frame
-    void Update() 
+    void Update()
     {
-        if ((Input.GetKey(KeyCode.D))){
-            if (initial.x <= 14){
-                isDown = false;
-                isUp = false;
-                isLeft = false;
-                isRight = false;
-                initial.x = initial.x + displacement;
-                animator.SetBool("walkright", true);
-                animator.SetBool("walkleft", false);
-                animator.SetBool("walkforward", false);
-                animator.SetBool("walkbackward", false);
-                isRight = true;
-            }
-            
-        }
-        else if((Input.GetKey(KeyCode.A))){
-            if (initial.x > -14){
-                isDown = false;
-                isUp = false;
-                isLeft = false;
-                isRight = false;
-                initial.x = initial.x - displacement;
-                animator.SetBool("walkforward", false);
-                animator.SetBool("walkbackward", false);
-                animator.SetBool("walkright", false);
-                animator.SetBool("walkleft", true);
-                isLeft = true;
 
-            }
-        }
-        else if((Input.GetKey(KeyCode.W))){
-            if (initial.y <= 14){
-                isDown = false;
-                isUp = false;
-                isLeft = false;
-                isRight = false;
-                initial.y = initial.y + displacement;
-                animator.SetBool("walkleft", false);
-                animator.SetBool("walkbackward", false);
-                animator.SetBool("walkright", false);
-                animator.SetBool("walkforward", true);
-                isUp = true;
-            }
-        }
-        else if((Input.GetKey(KeyCode.S))){
-            if (initial.y > -14){
-                isDown = false;
-                isUp = false;
-                isLeft = false;
-                isRight = false;
-                initial.y = initial.y - displacement;
-                animator.SetBool("walkleft", false);
-                animator.SetBool("walkforward", false);
-                animator.SetBool("walkright", false);
-                animator.SetBool("walkbackward", true);
-                isDown = true;
-            }
-        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            initial = docking.cr;
 
+        }
         else
         {
-            animator.SetBool("walkleft", false);
-            animator.SetBool("walkforward", false);
-            animator.SetBool("walkbackward", false);
-            animator.SetBool("walkright", false);
-            // isDown = false;
-            // isUp = false;
-            // isLeft = false;
-            // isRight = false;
-        
+            avatar.transform.position = (initial);
+            Debug.Log(initial);
+        }
+        float distance = Vector3.Distance(player.transform.position, checking);
 
+        // Check if the distance is more than the threshold
+        if (distance > 20)
+        {
+            player.transform.position = checking;
+            avatar.transform.position = checking;
+        }
+        bool collisionResult = CheckCollisionWithDock(player.transform.position);
+        Debug.Log($"Collision result: {collisionResult}");
+        // Get input for movement
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        // Update the initial position based on input
+        if (CheckCollisionWithWall(initial + new Vector2(horizontalInput, verticalInput) * displacement))
+        {
+            initial += new Vector2(horizontalInput, verticalInput) * displacement;
         }
 
-        if(playerNearChest && Input.GetKey(KeyCode.P )){
+        // Set animation based on movement direction
+        UpdateAnimation(horizontalInput, verticalInput);
+
+        // Check for interaction with chest
+        if (playerNearChest && Input.GetKey(KeyCode.P))
+        {
             words.text = "You've earned\n an \nemerald !!!";
             emerald.SetActive(true);
             collect.Play();
         }
 
-        if (Input.GetKey(KeyCode.Y) && isRight)
-        {   
-            animator.SetTrigger("rightFight");
-            death_con = true;
-            //Physics2D.OverlapCircleAll();
-            attack.Play();   
-        }
-        if (Input.GetKeyDown(KeyCode.Y) && isLeft){
-            animator.SetTrigger("leftFight");
-            death_con = true;
-            attack.Play();
-        }
-        if (Input.GetKey(KeyCode.Y) && isUp){
-            animator.SetTrigger("upFight");
-            death_con = true;
-            attack.Play();
-        }
-        if (Input.GetKeyDown(KeyCode.Y) && isDown){
-            animator.SetTrigger("downFight");
-            death_con = true;
-            attack.Play();
-        }
+        // Check for attack input
+        CheckAttackInput();
+        checking = docking.marker;
 
-        avatar.MovePosition(initial);
+        // Move the avatar to the updated position
+
+    }  
+
+    void UpdateAnimation(float horizontalInput, float verticalInput)
+    {
+        animator.SetBool("walkleft", horizontalInput < 0);
+        animator.SetBool("walkforward", verticalInput > 0);
+        animator.SetBool("walkbackward", verticalInput < 0);
+        animator.SetBool("walkright", horizontalInput > 0);
     }
 
-    void OnTriggerEnter2D(Collider2D collison){
-
-        if (collison.gameObject.CompareTag("chest")){
-            playerNearChest = true;
+    void CheckAttackInput()
+    {
+        if (Input.GetKey(KeyCode.Y))
+        {
+            if (isRight)
+            {
+                animator.SetTrigger("rightFight");
+                attack.Play();
+            }
+            else if (isLeft)
+            {
+                animator.SetTrigger("leftFight");
+                attack.Play();
+            }
+            else if (isUp)
+            {
+                animator.SetTrigger("upFight");
+                attack.Play();
+            }
+            else if (isDown)
+            {
+                animator.SetTrigger("downFight");
+                attack.Play();
+            }
         }
-
-        if(collison.gameObject.CompareTag("coin")){
-            coin.Play();
-        }
-
-        if(collison.gameObject.CompareTag("enemy") && death_con){
-            
-            enemy1.GetComponent<AIChase>().TakeDamage(25);
-  
-        }
-
-        if(collison.gameObject.CompareTag("enemy1") && death_con){
-            
-            enemy2.GetComponent<AIChase>().TakeDamage(25);
-  
-        }
-
-
-        if(collison.gameObject.CompareTag("enemy2") && death_con){
-            
-            enemy3.GetComponent<AIChase>().TakeDamage(25);
-  
-        }
-
-                  
-            
-    
     }
 
-    public bool deathCon(){
-        return death_con;
-    }
 
-    void OnTriggerExit2D(Collider2D collison){
+    bool CheckCollisionWithDock(Vector2 position)
+    {
 
-        if (collison.gameObject.CompareTag("chest")){
-            playerNearChest = false;
-            words.text = " ";
-            emerald.SetActive(false);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 1.0f); // Adjust the radius as needed
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("dock"))
+            {
+
+                if (Input.GetKeyDown(KeyCode.E) && collider.CompareTag("dock"))
+                {
+                    player.SetActive(false);
+                    shipScript.moveOk = true;
+                    initial = docking.cr;
+                    avatar.MovePosition(docking.cr);
+                }
+                return true;
+            }
         }
 
-         if(collison.gameObject.CompareTag("enemy"))
-         {
-            death_con = false;
-         }
-    
+        return false; // No collision with dock or "SpawnPos" not found
+    }
+    bool CheckCollisionWithWall(Vector3 position)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 1.0f); // Adjust the radius as needed
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("collide"))
+            {
+                return false; // Collision with island detected
+            }
+
+        }
+
+        return false; // No collision with islands
     }
 }

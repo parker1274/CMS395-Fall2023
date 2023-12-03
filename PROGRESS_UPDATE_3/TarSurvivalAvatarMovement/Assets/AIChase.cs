@@ -21,6 +21,23 @@ public class AIChase : MonoBehaviour
         
     }
 
+    private void onCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "player"){
+            // Prevent player from moving on top of the enemy
+            HandleCollisionResponse();
+        }
+    }
+
+    private void HandleCollisionResponse()
+    {
+        // Stop player movement
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+        // Alternatively, you can adjust the player's position
+        // transform.position += new Vector3(0, 1, 0); // Adjust the Y position to move the player upward
+    }
+
     public void TakeDamage(int damage){
         curr_health -= damage;
 
@@ -58,6 +75,5 @@ public class AIChase : MonoBehaviour
             //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
         }
         
-
     }
 }

@@ -10,6 +10,7 @@ TagManager:
   - enemy
   - enemy1
   - enemy2
+  - enemies
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - Enemy_layer
   - Player
-  - 
+  - background
   - 
   - 
   - 
@@ -44,6 +45,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 3612463903
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1436402269
     locked: 0

@@ -50,15 +50,6 @@ public class movement : MonoBehaviour
 
     }
 
-    // private bool isWalkable(Vector3 targetPos)
-    // {
-    //     if (Physics2D.OverlapCircleAll(targetPos, 0.2f, enemyLayer) != null){
-    //         return false;
-    //     }
-    //     return true;
-    // }
-
-    // Update is called once per frame
     void Update() 
     {
         if ((Input.GetKey(KeyCode.D))){
@@ -144,7 +135,6 @@ public class movement : MonoBehaviour
         {   
             animator.SetTrigger("rightFight");
             death_con = true;
-            //Physics2D.OverlapCircleAll();
             attack.Play();   
         }
         if (Input.GetKeyDown(KeyCode.Y) && isLeft){
@@ -194,11 +184,8 @@ public class movement : MonoBehaviour
             enemy3.GetComponent<AIChase>().TakeDamage(25);
   
         }
-
-                  
-            
-    
     }
+
 
     public bool deathCon(){
         return death_con;

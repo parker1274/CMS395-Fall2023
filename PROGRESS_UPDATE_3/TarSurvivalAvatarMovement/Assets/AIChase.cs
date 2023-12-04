@@ -23,6 +23,11 @@ public class AIChase : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        curr_health = 100;
+    }
+
     private void onCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "player")

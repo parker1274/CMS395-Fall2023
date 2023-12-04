@@ -157,6 +157,7 @@ public class movement : MonoBehaviour
             words.text = "You've earned\n an \nemerald !!!";
             emerald.SetActive(true);
             collect.Play();
+            
         }
 
         if (Input.GetKey(KeyCode.Y) && isRight)

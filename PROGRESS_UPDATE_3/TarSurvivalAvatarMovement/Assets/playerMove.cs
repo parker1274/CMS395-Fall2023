@@ -13,6 +13,19 @@ public class playerMove : MonoBehaviour
     public bool checkE;
     public Ship shipScript;
     public movement move;
+    public Transform e1;
+    public Transform e2;
+    public Transform e3;
+    public GameObject r1;
+    
+    
+    GameObject e4;
+    GameObject e5;
+    GameObject e6;
+    
+    
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +67,11 @@ public class playerMove : MonoBehaviour
             player.SetActive(true);
             player.transform.position = marker;
             shipScript.moveOk = false;
+            e4 = Instantiate(r1, e1.transform.position, Quaternion.identity);
+            e5 = Instantiate(r1, e2.transform.position, Quaternion.identity);
+            e6 = Instantiate(r1, e3.transform.position, Quaternion.identity);
+
+
         }
         if (docking == true && playerColliding == true)
         {
@@ -62,6 +80,12 @@ public class playerMove : MonoBehaviour
             shipScript.moveOk = true;
             docking = false;
             player.transform.position = new Vector2(0, 0);
+            Destroy(e4);
+            Destroy(e5);
+            Destroy(e6);
+            
+            
+
         }
         
 
@@ -94,6 +118,10 @@ public class playerMove : MonoBehaviour
             {
                 dockScript dockScript = collider.GetComponent<dockScript>();
                 marker = dockScript.spawnPos.position;
+                e1 = dockScript.enemyOne;
+                e2 = dockScript.enemyTwo;
+                e3 = dockScript.enemyThree;
+                
                 
             }
         }

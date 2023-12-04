@@ -50,7 +50,7 @@ public class playerMove : MonoBehaviour
         {
             boat.SetActive(false);
             docking = true;
-            boat.transform.position = new Vector2(boat.transform.position.x-.1f, boat.transform.position.y - .1f);
+            boat.transform.position = new Vector2(boat.transform.position.x-2f, boat.transform.position.y - 2f);
             player.SetActive(true);
             player.transform.position = marker;
             shipScript.moveOk = false;

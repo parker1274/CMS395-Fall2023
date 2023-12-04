@@ -505,7 +505,7 @@ MonoBehaviour:
   islandTen: {fileID: 3520487764545227994, guid: 9966daa9a7052460b8f5e3c6ff2d979c, type: 3}
   islandEleven: {fileID: 1830601663519438425, guid: bead2659b19c54c708b59f412cc328f8, type: 3}
   storyOne: {fileID: 8187275886590234349, guid: 42dd4fb66ac084e2a80d7bfc78e09257, type: 3}
-  storyTwo: {fileID: 6063639247128976031, guid: a55e4ac7029de4fabb2dcb922235a2fc, type: 3}
+  storyTwo: {fileID: 8768604165139604828, guid: 1a2f5d3d428ec47459c74ef4419e0fca, type: 3}
   storyThree: {fileID: 276329679610204966, guid: ef9948f8dd99a47faa1c9626ee6eef96, type: 3}
   ocean: {fileID: 1898174162484361214, guid: 21f2e175c51e34e22b5c9e9fa0bb85a9, type: 3}
 --- !u!4 &580113845

@@ -2637,12 +2637,8 @@ MonoBehaviour:
   enemyOne: {fileID: 4400133614331258376}
   enemyTwo: {fileID: 3706425504638871064}
   enemyThree: {fileID: 7858060837292624237}
-  chestSpawn: {fileID: 0}
-  coin1: {fileID: 0}
-  coin2: {fileID: 0}
-  coin3: {fileID: 0}
-  coin4: {fileID: 0}
-  coin5: {fileID: 0}
+  npc1: {fileID: 0}
+  kwrExit: {fileID: 0}
 --- !u!1 &839311050121123334
 GameObject:
   m_ObjectHideFlags: 0
@@ -28406,7 +28402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7022752597192139786, guid: 83731b33095364e4ab4a435e3bafcfc6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7022752597192139786, guid: 83731b33095364e4ab4a435e3bafcfc6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28864,7 +28860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7022752597192139786, guid: 83731b33095364e4ab4a435e3bafcfc6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7022752597192139786, guid: 83731b33095364e4ab4a435e3bafcfc6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28992,7 +28988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7022752597192139786, guid: 83731b33095364e4ab4a435e3bafcfc6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7022752597192139786, guid: 83731b33095364e4ab4a435e3bafcfc6, type: 3}
       propertyPath: m_LocalRotation.w

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Ship : MonoBehaviour
 {
@@ -10,8 +9,6 @@ public class Ship : MonoBehaviour
     public float moveSpeed = 5.0f;
     public bool moveOk = true;
     public GameObject player;
-    public money cash;
-    public bool end = false;
     
    
 
@@ -19,17 +16,10 @@ public class Ship : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        GameObject mapObject = GameObject.Find("player");
-        cash = mapObject.GetComponent<money>();
-
     }
 
     void Update()
     {
-        if (cash.redGem && cash.greenGem && cash.blueGem)
-        {
-            end = true;
-        }
         // Get input for boat movement
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -46,25 +36,18 @@ public class Ship : MonoBehaviour
         if (transform.position.x < 9.5)
         {
             transform.position = new Vector2(9.5f, transform.position.y);
-            
         }
         if (transform.position.y < 5)
         {
             transform.position = new Vector2(transform.position.x, 5);
-            
         }
         if (transform.position.x > 495)
         {
             transform.position = new Vector2(495, transform.position.y);
-            
         }
         if (transform.position.y > 495)
         {
             transform.position = new Vector2(transform.position.x, 495);
-        }
-        if (end == true)
-        {
-            SceneManager.LoadScene("Opening");
         }
         
         // ... (your existing boundary checks)
@@ -86,7 +69,6 @@ public class Ship : MonoBehaviour
 
         return false; // No collision with islands
     }
-
 
 
 }

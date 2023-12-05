@@ -9,6 +9,7 @@ public class Ship : MonoBehaviour
     public float moveSpeed = 5.0f;
     public bool moveOk = true;
     public GameObject player;
+    
    
 
 
@@ -35,7 +36,6 @@ public class Ship : MonoBehaviour
         if (transform.position.x < 9.5)
         {
             transform.position = new Vector2(9.5f, transform.position.y);
-
         }
         if (transform.position.y < 5)
         {

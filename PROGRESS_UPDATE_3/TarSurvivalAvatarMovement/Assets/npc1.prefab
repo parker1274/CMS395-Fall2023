@@ -89,7 +89,7 @@ Transform:
   - {fileID: 1810581863274591406}
   - {fileID: 353207385018238745}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2487926310630892164
 GameObject:
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 9144440897363071677}
   - component: {fileID: 271976084637301551}
   m_Layer: 0
-  m_Name: npc1
+  m_Name: NPC1 (2)_1
   m_TagString: npc1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

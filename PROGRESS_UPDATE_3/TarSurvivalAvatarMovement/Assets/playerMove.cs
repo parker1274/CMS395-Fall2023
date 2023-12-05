@@ -24,10 +24,7 @@ public class playerMove : MonoBehaviour
     public GameObject coin;
     bool inBuilding = false;
     public Transform kwrSpawn;
-    public Transform librarySpawn;
-    public Transform chapelSpawn;
     public Transform kwrExit;
-
     GameObject e4;
     GameObject e5;
     GameObject e6;
@@ -175,19 +172,6 @@ public class playerMove : MonoBehaviour
             {
                 move.initial = kwrSpawn.transform.position;
                 player.transform.position = kwrSpawn.transform.position;
-                inBuilding = true;
-            }
-       
-            if (collider.CompareTag("entry2"))
-            {
-                move.initial = chapelSpawn.transform.position;
-                player.transform.position = chapelSpawn.transform.position;
-                inBuilding = true;
-            }
-            if (collider.CompareTag("entry3"))
-            {
-                move.initial = librarySpawn.transform.position;
-                player.transform.position = librarySpawn.transform.position;
                 inBuilding = true;
             }
             if (collider.CompareTag("exit"))

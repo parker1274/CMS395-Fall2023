@@ -1117,6 +1117,8 @@ GameObject:
   - component: {fileID: 958852805}
   - component: {fileID: 958852804}
   - component: {fileID: 958852803}
+  - component: {fileID: 958852808}
+  - component: {fileID: 958852807}
   m_Layer: 0
   m_Name: ship1
   m_TagString: Untagged
@@ -1233,6 +1235,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &958852807
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958852802}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f2e292296d21411ea1cc2adceafa62a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &958852808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958852802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ebda76c43554775b14efa030373ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 958852807}
 --- !u!1 &964383983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,6 +2399,9 @@ MonoBehaviour:
   talk1: {fileID: 0}
   unlockMap: 0
   imgText: {fileID: 835180929}
+  greenGem: 0
+  redGem: 0
+  blueGem: 0
 --- !u!1 &2116834045
 GameObject:
   m_ObjectHideFlags: 0

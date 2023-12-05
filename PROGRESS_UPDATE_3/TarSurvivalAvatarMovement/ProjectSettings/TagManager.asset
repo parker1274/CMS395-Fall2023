@@ -14,6 +14,9 @@ TagManager:
   - collide
   - dock
   - check
+  - Ruby
+  - box
+  - coins
   layers:
   - Default
   - TransparentFX
@@ -56,4 +59,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1436402269
+    locked: 0
+  - name: UI
+    uniqueID: 3818668657
     locked: 0

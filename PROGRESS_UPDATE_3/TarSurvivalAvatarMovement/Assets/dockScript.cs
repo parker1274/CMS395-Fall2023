@@ -8,8 +8,8 @@ public class dockScript : MonoBehaviour
     public Transform enemyOne;
     public Transform enemyTwo;
     public Transform enemyThree;
-    
-    
+    public Transform npc1;
+    public Transform kwrExit;
     // Start is called before the first frame update
     void Start()
     {

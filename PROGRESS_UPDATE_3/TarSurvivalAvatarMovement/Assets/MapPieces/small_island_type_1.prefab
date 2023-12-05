@@ -5238,7 +5238,7 @@ MonoBehaviour:
   enemyOne: {fileID: 2755212544845827671}
   enemyTwo: {fileID: 1938871810823452441}
   enemyThree: {fileID: 0}
-  chestSpawn: {fileID: 0}
+  npc1: {fileID: 0}
 --- !u!1 &5377915506502030750
 GameObject:
   m_ObjectHideFlags: 0
@@ -7847,7 +7847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7788013861513797691}
   m_LocalRotation: {x: -0, y: -0, z: 0.08715578, w: 0.9961947}
-  m_LocalPosition: {x: 8.5, y: 6.5, z: 0}
+  m_LocalPosition: {x: 8.5, y: 6.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8546,7 +8546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8408879722128664255}
   m_LocalRotation: {x: -0, y: -0, z: -0.08715578, w: 0.9961947}
-  m_LocalPosition: {x: 6.5, y: 10.5, z: 0}
+  m_LocalPosition: {x: 6.523, y: 10.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9108,7 +9108,7 @@ Transform:
   m_GameObject: {fileID: 8826112265982057785}
   m_LocalRotation: {x: 0.08715578, y: -0, z: -0, w: 0.9961947}
   m_LocalPosition: {x: 6.5, y: 10.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5387938999332770296}

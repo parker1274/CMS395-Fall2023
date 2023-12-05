@@ -63,6 +63,11 @@ https://docs.google.com/document/d/1RGrLTkavZMxP5oQIuM1lez_9NcEqqQiFd8H_I80FH2g/
 [ Progress #4 Powerpoint slide ]  
 https://www.canva.com/design/DAF1l_ZVPms/XKafMGBAZqtSnNaSYjwVwQ/edit
 
+
+## Video Game Design Project Grand Final Showcasing
+Intro video of the Game (TARSURVIVAL)
+https://mediaspace.rollins.edu/media/TARSURVIVAL+INTRO+VIDEO/1_u3x8zdzn
+
 ## Official Description
 This course covers video game design, implementation, and evaluation essentials. Students will
 work on semester-long projects to develop and present a complete, full-featured game. Topics
